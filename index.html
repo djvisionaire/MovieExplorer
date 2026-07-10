@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Explorer</title>
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+<header>
+
+<h1>🎬 Movie Explorer</h1>
+
+<div class="controls">
+    <input type="text" id="search" onchange="onsearchchange()" placeholder="Search movies...">
+
+<select id="sort" onchange="filterMovies(event)">
+    <option value="" disabled selected>Select Sort Order</option>
+    <option value="az">Alphabetical A → Z</option>
+    <option value="za">Alphabetical Z → A</option>
+    <option value="newest">Newest to Oldest</option>
+    <option value="oldest">Oldest to Newest</option>
+</select>
+<select id="genre">
+    <option value="">All Genres</option>
+</select>
+</div>
+</header>
+
+<main>
+
+<section id="movies" class="movie-grid">
+    <div class="movie-list">
+
+  
+    </div>
+    <div class="movies movies__loading">
+        <i class="fas fa-spinner movies__loading--spinner"></i>
+    </div>
+
+</section>
+
+</main>
+
+<script src="index.js"></script>
+
+
+<footer>
+    <h2 ALIGN="center">🎬 Movie Explorer</h2>
+    <p class="footer">© 2026 Movie Explorer. All rights reserved.</p>
+</footer>
+</body>
+</html>
