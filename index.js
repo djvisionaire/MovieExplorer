@@ -35,15 +35,15 @@ async function renderMovies(sort) {
   const movieList = document.querySelector(".movie-list");
 
   // Show loading state if you want, but toggle it safely
-  movieGrid.classList.add('movies__loading');
+  movieList.classList.add('movies__loading');
 
   // If we don't have movies yet, stop here
   if (!globalMovies || globalMovies.length === 0) {
-     movieGrid.classList.remove('movies__loading');
+     movieList.classList.remove('movies__loading');
      return;
   }
   
-  movieGrid.classList.remove('movies__loading');
+  movieList.classList.remove('movies__loading');
 
   // Search
 const container = document.getElementById("movies");
@@ -62,7 +62,8 @@ async function searchMovies(search = "fast") {
         return;
     }
 
-    displayMovies(data.Search);
+    globalMovies(data.Search);
+    renderMovies()
 
 }
 document
