@@ -2,7 +2,7 @@
 // Keep track of movies globally so both fetching and sorting can access them
 
 const API_KEY = "46d31633";
-const BASE_URL = " http://www.omdbapi.com/?i=tt3896198";
+const BASE_URL = "http://www.omdbapi.com/?i=tt3896198";
 
 let globalMovies = []; 
 
@@ -49,6 +49,7 @@ async function renderMovies(sort) {
 const container = document.getElementById("movies");
 
 
+
 async function searchMovies(search = "fast") {
 
     const response = await fetch(
@@ -62,10 +63,11 @@ async function searchMovies(search = "fast") {
         return;
     }
 
-    globalMovies(data.Search);
+    globalMovies = data.Search || [];
     renderMovies()
 
 }
+
 document
 .getElementById("search")
 .addEventListener("keyup", function(){
