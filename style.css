@@ -80,14 +80,7 @@ width:250px;
 }   
 
 .movie-grid{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:40px;
-    display:grid;
-    grid-template-columns:
-    repeat(auto-fill,minmax(250px,1fr));
-    gap:30px;
+    
 
 }
 
