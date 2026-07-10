@@ -50,6 +50,21 @@ const container = document.getElementById("movies");
 
 
 
+
+
+document
+.getElementById("search")
+.addEventListener("keyup", function(){
+
+    if(this.value.length > 2){
+
+        searchMovies(this.value);
+
+    }
+
+});
+
+
 async function searchMovies(search = "fast") {
 
     const response = await fetch(
@@ -67,19 +82,6 @@ async function searchMovies(search = "fast") {
     renderMovies()
 
 }
-
-document
-.getElementById("search")
-.addEventListener("keyup", function(){
-
-    if(this.value.length > 2){
-
-        searchMovies(this.value);
-
-    }
-
-});
-
 
   // Handle sorting logic
   if (sort === "az") {
