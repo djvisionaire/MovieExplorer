@@ -241,3 +241,9 @@ width:100%;
     justify-content:center; 
     text-align:center;
 }
+
+.footer-link{
+    color:#ff3d3d;
+    text-decoration:none;
+    text-align:center;
+}
