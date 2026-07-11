@@ -2,7 +2,7 @@
 // Keep track of movies globally so both fetching and sorting can access them
 
 const API_KEY = "46d31633";
-const BASE_URL = "http://www.omdbapi.com/?i=tt3896198";
+const BASE_URL = "https://www.omdbapi.com/?i=tt3896198";
 
 let globalMovies = []; 
 
